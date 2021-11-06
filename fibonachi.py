@@ -9,7 +9,7 @@ def fibonacci_list(i):
         return (spisok, stop_func - start_func)
     else:
         spisok = [0,1]
-        for summa in range(2,i+1):
+        for summa in range(2, i+1):
             spisok.append(spisok[summa-2]+spisok[summa-1])
         stop_func = time.perf_counter()
         return(spisok, stop_func - start_func)

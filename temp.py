@@ -1,14 +1,22 @@
+# заполнение двумерного массива
+# m - количество столбцов, n - количество строк
+m = 9
+n = 3
+print(f'Значение m = {m}, значение n = {n}')
+massive = [[0]*m for i in range(n)]
+print(f"\033[31m{massive}\033[0m")  # текст красного цвета
+print(massive)
+'''
+
 # реверс строки с определенного элемента
 # c - 3 элемента Исходня строка - 123456, перевернутая 123654
-'''
+
 n = 3
 stroka = '123456789'
 stroka_tmp = stroka[n::]
 stroka_reverse = stroka[0:n] + stroka_tmp[::-1]
 
 print(stroka_reverse)
-
-'''
 
 # реверсируем список от определенного элемента
 n = 4
@@ -27,3 +35,5 @@ stroka = 'abcdef'
 print(stroka)
 stroka = stroka [-1] + stroka[1: -1] + stroka[0]
 print(stroka)
+
+'''
