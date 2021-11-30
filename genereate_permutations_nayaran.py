@@ -67,5 +67,5 @@ def genereate_permutations_nayaran(string_for_permutations:str):
 string_start = input('Введите строку для генерации перестановок: ')
 
 string_permutations = genereate_permutations_nayaran(string_start)
-print('Варианты перестановок:', string_permutations)
+#print('Варианты перестановок:', string_permutations)
 print('Количество перестановок:', len(string_permutations))

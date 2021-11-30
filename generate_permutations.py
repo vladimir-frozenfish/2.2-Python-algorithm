@@ -28,4 +28,4 @@ def genereate_permutations(N:int, M:int=-1, prefix=None):
         genereate_permutations(N, M-1, prefix)
         prefix.pop()
 
-genereate_permutations(4)
+genereate_permutations(5)
