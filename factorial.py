@@ -21,4 +21,4 @@ n = int(input("Введите натуральное число: "))
 
 print("Факториал числа", n, "=", factorial(n))
 
-print("Рекурсия Факториал числа", n, "=", factorial_recur(n))
+# print("Рекурсия Факториал числа", n, "=", factorial_recur(n))
