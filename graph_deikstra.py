@@ -2,7 +2,12 @@ from collections import deque
 
 def main():
     """считываем граф"""
-    G = read_graph()
+    # G = read_graph()
+    G = {'a': {'b': 2.0, 'd': 4.0, 'c': 5.0},
+         'b': {'a': 2.0, 'c': 1.0},
+         'd': {'a': 4.0, 'e': 7.0},
+         'c': {'b': 1.0, 'e': 1.0, 'a': 5.0},
+         'e': {'c': 1.0, 'd': 7.0}}
     print(G)
 
     start = input('С какой вершины начать? - ')
@@ -57,6 +62,7 @@ def dijkstra(G, start):
     return S
 
 def reveal_shortest_path(G, start, finish, shortest_distances):
+    """восстановление кратчайшего пути от стратовой точки до указанной"""
     Q = deque()
     v = finish
     """добавляем в очередь последнюю вершину"""
@@ -76,7 +82,7 @@ def reveal_shortest_path(G, start, finish, shortest_distances):
                 Q.appendleft(n)
                 v = n
                 break
-    return Q
+    return list(Q)
 
 
 def add_edge(G, a, b, weight):
