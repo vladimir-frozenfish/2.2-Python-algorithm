@@ -40,7 +40,7 @@ def search_binary(A: list, key):
 
 
 A = [1,1,1,4,4,4,5,7,8,10,11,23,25]
-print(search_binary(A, -5))
+print(search_binary(A, 30))
 
 
 
