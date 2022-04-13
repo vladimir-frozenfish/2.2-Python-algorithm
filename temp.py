@@ -1,3 +1,6 @@
-x = [1,2,3]
+from functools import reduce
 
-print(x.pop(0))
+
+s = [1, 2, 3, 4]
+x = reduce(lambda x, y: x+y, s)
+print(x)

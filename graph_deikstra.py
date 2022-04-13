@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def main():
     """считываем граф"""
     # G = read_graph()
@@ -26,6 +27,7 @@ def main():
 
     shortest_path = reveal_shortest_path(G, start, finish, shortest_distances)
     print(shortest_path)
+
 
 def read_graph():
     """считываем данные о графе и заносим в словарь"""
@@ -61,6 +63,7 @@ def dijkstra(G, start):
 
     return S
 
+
 def reveal_shortest_path(G, start, finish, shortest_distances):
     """восстановление кратчайшего пути от стратовой точки до указанной"""
     Q = deque()
@@ -91,6 +94,7 @@ def add_edge(G, a, b, weight):
         G[a] = {b: weight}
     else:
         G[a][b] = weight
+
 
 if __name__ == '__main__':
     main()
