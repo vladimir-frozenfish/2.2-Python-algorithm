@@ -1,6 +1,4 @@
-from functools import reduce
-
-
-s = [1, 2, 3, 4]
-x = reduce(lambda x, y: x+y, s)
-print(x)
+moves = 0
+x = [1, 2, 3, 4, 5, 6]
+print(x[:moves])
+print(x[-1:-moves-1:-1])

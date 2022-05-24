@@ -4,7 +4,7 @@
 
 import time
 
-from scripts.random import random_string_list
+from scripts.random_string_list import random_string_list
 
 
 def minimum(array):

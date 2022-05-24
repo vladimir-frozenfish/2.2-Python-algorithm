@@ -4,11 +4,11 @@ import time
 def fibonacci_list(i):
     start_func = time.perf_counter()
     if i == 0:
-        spisok = [0]
+        spisok = [1]
         stop_func = time.perf_counter()
         return (spisok, stop_func - start_func)
     else:
-        spisok = [0,1]
+        spisok = [1, 1]
         for summa in range(2, i+1):
             spisok.append(spisok[summa-2]+spisok[summa-1])
         stop_func = time.perf_counter()
@@ -20,7 +20,7 @@ start = time.perf_counter()
 
 spisok_fibonachi, time_function = fibonacci_list(n)
 
-print(*spisok_fibonachi, sep="\n") # вывод всего ряда Фибоначчи
+# print(*spisok_fibonachi, sep="\n") # вывод всего ряда Фибоначчи
 print("Последнее число в ряду Фибоначчи:", spisok_fibonachi[n]) # вывод последнего числа в ряду Фибоначчи
 stop = time.perf_counter()
 print("Время операции функции:", round(time_function, 5), "секунд")

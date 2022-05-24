@@ -4,6 +4,7 @@
 Функция возращает левую и правую границу ключа (ключей) в массиве
 '''
 
+
 def left_bound(A: list, key):
     left = -1
     right = len(A)
@@ -31,6 +32,7 @@ def right_bound(A: list, key):
 
     return right
 
+
 def search_binary(A: list, key):
     A = A
     key = key
@@ -39,7 +41,7 @@ def search_binary(A: list, key):
     return search_result
 
 
-A = [1,1,1,4,4,4,5,7,8,10,11,23,25]
+A = [1, 1, 1, 4, 4, 4, 5, 7, 8, 10, 11, 23, 25]
 print(search_binary(A, 30))
 
 

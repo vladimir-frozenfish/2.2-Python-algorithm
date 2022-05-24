@@ -1,7 +1,7 @@
 import random
 import time
 
-from scripts.random import random_string_list
+from scripts.random_string_list import random_string_list
 
 
 def search_binary_simple(order_list, key):

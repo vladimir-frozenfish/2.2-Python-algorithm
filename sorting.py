@@ -7,6 +7,7 @@ def insert_sort(A):
             A[k], A[k-1] = A[k-1], A[k]
             k -= 1
 
+
 def choise_sort(A):
     """ сортировка списка A выбором """
     N = len(A)
@@ -15,6 +16,7 @@ def choise_sort(A):
             if A[k] < A[pos]:
                 A[k], A[pos] = A[pos], A[k]
 
+
 def bubble_sort(A):
     """ сортировка списка A методом пузырька """
     N = len(A)
@@ -22,6 +24,7 @@ def bubble_sort(A):
         for k in range(0, N-bypass):
             if A[k] > A[k+1]:
                 A[k], A[k+1] = A[k+1], A[k]
+
 
 def test_sort(sort_algorithm):
     ''' тестирующая функиця '''
