@@ -1,5 +1,6 @@
 import random
 import time
+from bisect import bisect_left
 
 from scripts.random_string_list import random_string_list
 
@@ -34,7 +35,7 @@ print(search_binary_simple(order_list, 5))
 создается большой список случайных строк, из него берется случайный элемент и и проводится его поиск.
 Как итог - бинарный поиск быстрее. 
 '''
-maximum = 1000
+maximum = 10000
 spisok = sorted(random_string_list(maximum, 20))
 find_elements = spisok[random.randint(0, maximum-1)]
 
@@ -42,10 +43,24 @@ start_func = time.perf_counter()
 print(search_binary_simple(spisok, find_elements))
 stop_func = time.perf_counter()
 print(f'Время выполнения функции бинарного поиска: {round(stop_func-start_func, 5)}')
+time_search_binary = stop_func-start_func
 print()
 
 start_func = time.perf_counter()
 print(spisok.index(find_elements))
 stop_func = time.perf_counter()
 print(f'Время выполнения встроенной функции поиска: {round(stop_func-start_func, 5)}')
+print()
+
+start_func = time.perf_counter()
+print(bisect_left(spisok, find_elements))
+stop_func = time.perf_counter()
+print(f'Время выполнения функции поиска Bisect: {round(stop_func-start_func, 5)}')
+time_search_bisect = stop_func-start_func
+print()
+
+if time_search_binary < time_search_bisect:
+    print('Функция бинарного поиска быстрее bisect')
+else:
+    print('Функция бинарного поиска медленнее bisect')
 
